@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { ScrollReveal } from "@/components/home/ScrollReveal";
 import { FeatureBlock } from "@/components/home/FeatureBlock";
+import { SpecHighlights } from "@/components/home/SpecHighlights";
 
 export default function HomePage() {
   return (
@@ -38,6 +39,8 @@ export default function HomePage() {
           imageAlt="Nova milled titanium rim and ceramic housing"
           layout="image-left"
         />
+
+        <SpecHighlights />
       </main>
       <Footer />
     </>
