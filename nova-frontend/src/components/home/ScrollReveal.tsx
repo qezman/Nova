@@ -87,7 +87,7 @@ export function ScrollReveal() {
 
           <div
             ref={textRef}
-            style={{ opacity: 0 }}
+            style={{ opacity: prefersReducedMotion ? 1 : 0 }}
             className="absolute bottom-12 inset-x-0 text-center pointer-events-none transition-transform duration-200 ease-out"
           >
             <p className="type-headline text-[var(--ink-on-dark)] max-w-xl mx-auto px-4">
