@@ -31,9 +31,9 @@ export function FeatureBlock({
     <section
       ref={containerRef}
       aria-label={headline}
-      className="py-24 sm:py-32 lg:py-40 px-6 sm:px-10 lg:px-16 max-w-[1440px] mx-auto overflow-hidden"
+      className="py-14 sm:py-24 lg:py-40 px-6 sm:px-10 lg:px-16 max-w-[1440px] mx-auto overflow-hidden"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-center">
         <div
           className={`
             feature-image lg:col-span-7
@@ -57,11 +57,11 @@ export function FeatureBlock({
             ${isImageLeft ? "lg:order-2 lg:pl-4" : "lg:order-1 lg:pr-4"}
           `}
         >
-          <div className="mb-4">
+          <div className="mb-3 sm:mb-4">
             <SectionLabel>{eyebrow}</SectionLabel>
           </div>
 
-          <h2 className="type-headline text-[var(--ink)] mb-6">{headline}</h2>
+          <h2 className="type-headline text-[var(--ink)] mb-4 sm:mb-6">{headline}</h2>
 
           <p className="type-body text-[var(--ink-secondary)] max-w-[420px]">
             {body}
