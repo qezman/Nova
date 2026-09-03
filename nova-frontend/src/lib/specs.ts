@@ -63,7 +63,7 @@ export const SPEC_SECTIONS: SpecSection[] = [
       { label: "Capacity", value: "1,340 mAh" },
       { label: "Life", value: "Up to 14 h mixed use" },
       { label: "Charging", value: "30 W wired / 15 W wireless" },
-      { label: "Charge time (0→80%)", value: "38 min" },
+      { label: "Charge time (0-80%)", value: "38 min" },
     ],
   },
   {
