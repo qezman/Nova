@@ -1,0 +1,129 @@
+@import url("https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap");
+
+/* --font-switzer maps the CDN @font-face family name to our design token */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Canvas */
+  --canvas: #f4f2ee;
+  --canvas-raised: #ffffff;
+  --canvas-deep: #0e0d0b;
+
+  /* Text */
+  --ink: #17160f;
+  --ink-secondary: #5c5a52;
+  --ink-tertiary: #918e83;
+  --ink-on-dark: #f4f2ee;
+  --ink-on-dark-secondary: rgba(244, 242, 238, 0.6);
+
+  --accent: #d5451b;
+  --accent-text: #b83a16;
+  --accent-hover: #b83a16;
+  --accent-dim: rgba(213, 69, 27, 0.1);
+  --accent-on-dark: #ff5a2b;
+
+  /* Borders */
+  --border: rgba(23, 22, 15, 0.1);
+  --border-strong: rgba(23, 22, 15, 0.2);
+  --border-on-dark: rgba(244, 242, 238, 0.12);
+
+  /* Fonts */
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: "Switzer", system-ui, sans-serif;
+
+  /* Animation - single source of truth */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.35s;
+  --duration-base: 0.6s;
+  --duration-slow: 0.9s;
+  --stagger: 0.09s;
+}
+
+/*  Base resets  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background-color: var(--canvas);
+  overflow-x: hidden;
+}
+
+/*  Focus rings - never removed, always visible  */
+
+:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 3px;
+}
+
+/*  Typography scale  */
+
+.type-hero {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 9vw, 128px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.type-headline {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.type-title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.type-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.type-body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.type-caption {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/*  Selection  */
+
+::selection {
+  background-color: var(--accent-dim);
+  color: var(--ink);
+}
