@@ -41,7 +41,11 @@ export function ScrollReveal() {
       scrub: 0.5,
       onUpdate: (self) => {
         const progress = self.progress
-        const index = Math.floor(progress * FRAME_COUNT)
+        // Frame index is clamped to avoid an out-of-bounds draw during the final scroll tick.
+        const index = Math.min(
+          FRAME_COUNT - 1,
+          Math.floor(progress * FRAME_COUNT)
+        )
         setFrameIndex(index)
 
         if (text) {
