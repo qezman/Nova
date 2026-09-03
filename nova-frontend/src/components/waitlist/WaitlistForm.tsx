@@ -30,6 +30,10 @@ export function WaitlistForm({
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value)
+    if (status === 'error') {
+      setStatus('idle')
+      setErrorMessage('')
+    }
   }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
