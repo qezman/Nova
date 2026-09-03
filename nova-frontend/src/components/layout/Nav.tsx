@@ -29,11 +29,12 @@ export function Nav() {
         fixed top-0 left-0 right-0 z-50
         flex items-center justify-between
         px-8 md:px-12 h-16
-        transition-[border-color,background-color] duration-300
+        transition-all duration-300
         border-b border-transparent
-        data-[scrolled]:border-[var(--border)]
-        data-[scrolled]:bg-[var(--canvas)]/90
-        data-[scrolled]:[backdrop-filter:blur(12px)]
+        data-[scrolled]:border-[rgba(23,22,15,0.08)]
+        data-[scrolled]:bg-white/75
+        data-[scrolled]:backdrop-blur-xl
+        data-[scrolled]:shadow-[0_2px_12px_rgba(0,0,0,0.04)]
       "
     >
       <Link
@@ -63,7 +64,7 @@ export function Nav() {
           <Link
             href="/waitlist"
             className="
-              inline-flex items-center px-5 py-2 type-label
+              inline-flex items-center px-5 py-2 type-label rounded-md
               border border-[var(--border-strong)] text-[var(--ink)]
               hover:border-[var(--ink)] transition-colors duration-200
             "

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { gsap, ScrollTrigger } from '@/lib/gsap'
+import { ScrollTrigger } from '@/lib/gsap'
 import { FrameCanvas } from '@/components/home/FrameCanvas'
 import { useFramePreloader } from '@/hooks/useFramePreloader'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
@@ -41,7 +41,7 @@ export function ScrollReveal() {
       scrub: 0.5,
       onUpdate: (self) => {
         const progress = self.progress
-        // Frame index is clamped to avoid an out-of-bounds draw during the final scroll tick.
+        // Frame index is clamped to avoid an out-of-bounds draw during the final scroll tick
         const index = Math.min(
           FRAME_COUNT - 1,
           Math.floor(progress * FRAME_COUNT)

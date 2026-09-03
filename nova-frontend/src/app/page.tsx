@@ -4,6 +4,8 @@ import { Hero } from "@/components/home/Hero";
 import { ScrollReveal } from "@/components/home/ScrollReveal";
 import { FeatureBlock } from "@/components/home/FeatureBlock";
 import { SpecHighlights } from "@/components/home/SpecHighlights";
+import { SectionLabel } from "@/components/ui/SectionLabel";
+import { WaitlistForm } from "@/components/waitlist/WaitlistForm";
 
 export default function HomePage() {
   return (
@@ -41,6 +43,25 @@ export default function HomePage() {
         />
 
         <SpecHighlights />
+
+        <section
+          aria-label="Waitlist registration"
+          className="bg-[var(--canvas)] py-32 sm:py-40 px-6 sm:px-10 lg:px-16 text-center border-t border-[var(--border)]"
+        >
+          <div className="max-w-2xl mx-auto">
+            <div className="mb-6">
+              <SectionLabel>Early Access</SectionLabel>
+            </div>
+            <h2 className="type-headline text-[var(--ink)] tracking-tight mb-4">
+              Be among the first.
+            </h2>
+            <p className="type-body text-[var(--ink-secondary)] max-w-md mx-auto mb-10">
+              Limited initial production batch. Reserve your place for early
+              allotment.
+            </p>
+            <WaitlistForm variant="inline" />
+          </div>
+        </section>
       </main>
       <Footer />
     </>

@@ -9,6 +9,7 @@
 :root {
   /* Canvas */
   --canvas: #f4f2ee;
+  --canvas-translucent: rgba(244, 242, 238, 0.82);
   --canvas-raised: #ffffff;
   --canvas-deep: #0e0d0b;
 
